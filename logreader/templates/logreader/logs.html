@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+<head>
+    <title>NGC log viewer</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'logreader/logs.css' %}">
+</head>
+
+<body>
+    <div class="result">
+    <h1>Here are logs of <strong>{{ soft_name }}</strong></h1>
+    <table>
+        <tr>
+            <th>time</th>
+            <th>message</th>
+        </tr>
+        {% for t,log in log_list %}
+        <tr>
+            <td>{{ t.year }}/{{ t.month }}/{{ t.day }} {{t.hour}}:{{t.minute}}:{{t.second}}</td>
+            <td>{{ log }}</td>
+        </tr>  
+        {% endfor%}
+    </table>
+    </div>
+</body>
+
+</html>

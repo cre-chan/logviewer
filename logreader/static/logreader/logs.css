@@ -1,0 +1,40 @@
+body div.result{
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkseagreen;
+    padding: 2em;
+}
+
+body h1 strong{
+    color: darkblue;
+}
+
+body div.result table{
+    table-layout: fixed;
+    width: 100%;
+    word-wrap: break-word;
+    border: wheat solid 2px;
+    border-collapse: collapse;
+}
+
+body div.result table tr{
+    border: wheat solid 2px;
+}
+
+body div.result table tr td,th{
+    text-align: left;
+    vertical-align: top;
+    border: wheat solid 2px;
+}
+
+body div.result table tr td{
+    padding-bottom: 1em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+body div.result table tr th{
+    height: 3em;
+}
