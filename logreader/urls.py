@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import search,logs
+from . import views
 
 
 app_name = 'logreader'
 urlpatterns = [
-    path('',search,name="search"),
-    path('logs',logs,name="logs")
+    path('',views.search,name="search"),
+    path('logs',views.logs,name="logs")
 ]

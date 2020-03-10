@@ -3,8 +3,8 @@ import json
 import logviewer.settings as settings
 from os import environ
 
-
-passwd=environ['USER_PASSWD']+'\n'
+passwd="Xu314159\n"
+# passwd=environ['USER_PASSWD']+'\n'
 
 
 class Querier():
@@ -65,21 +65,3 @@ class RestrictQuery(Querier):
     def __init__(self:Querier,query:Querier,n):
         self.get_opts=lambda : query.get_opts()+['-n',str(n)]
         self.query_journal=lambda opt: query.query_journal(opt)
-
-def rev_opt():
-    """
-    reverse the output order, display recent logs first
-    """
-    return ['-r']
-
-def software_opt(name):
-    """
-    choose the software's name to inspect
-    """
-    return ['-u',name]
-
-def number_opt(n):
-    """
-    limit the maximum number of logs to display
-    """
-    return ['-n',str(n)]
